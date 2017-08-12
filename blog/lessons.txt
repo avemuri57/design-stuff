@@ -1,0 +1,5 @@
+1. What does box-sizing:border-box do?
+box size is border of the box, not content. 
+
+2. How do you center page?
+margin-right:auto; margin-left:auto;
