@@ -1,0 +1,59 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.2/browser.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app"></div>
+
+<script type="text/babel">
+var CounterClass = React.createClass({
+	render: function(){
+		return(
+			<div className="container">
+				<h1> Count: {this.state.count} </h1>
+				<button onClick={this.addOne} className="btn btn-green"> Add 1</button>
+				<button onClick={this.addFive} className="btn btn-blue"> Add 5 </button>
+				<button onClick={this.subtractOne} className="btn btn-red">Subtract 1</button>
+			</div>
+		)
+	},
+	addOne:function(){
+		this.setState({
+			count:this.state.count+1
+		})
+
+	},
+
+	addFive:function(){
+		this.setState({
+		count:this.state.count+5
+		})
+	},
+
+	subtractOne:function(){
+		this.setState({
+		count:this.state.count-1
+		})
+	},
+
+
+	getInitialState:function(){
+		return {
+			count:0
+		}
+	}
+});
+
+
+ReactDOM.render(<CounterClass/>,
+	document.getElementById('app')
+	)
+</script>
+
+
+</body>
+</html>
