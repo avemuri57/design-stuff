@@ -17,7 +17,7 @@ var CounterClass = React.createClass({
 				<h1> Count: {this.state.count} </h1>
 				<button onClick={this.addOne} className="btn btn-green"> Add 1</button>
 				<button onClick={this.addFive} className="btn btn-blue"> Add 5 </button>
-				<button onClick={this.subtractOne} className="btn btn-red">Subtract 1</button>
+				<button onClick={this.subtractFive} className="btn btn-red">Subtract 5</button>
 			</div>
 		)
 	},
@@ -34,9 +34,9 @@ var CounterClass = React.createClass({
 		})
 	},
 
-	subtractOne:function(){
+	subtractFive:function(){
 		this.setState({
-		count:this.state.count-1
+		count:this.state.count-5
 		})
 	},
 
